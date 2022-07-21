@@ -3,10 +3,7 @@ const gm = require("gm");
 const path = require("path");
 const fs = require("fs-extra");
 
-if (process.argv.length < 3) {
-  return console.log(`Usage:
-    node face_detection.js <path_to_image>`);
-}
+if (process.argv.length < 3) return console.log(`Usage: node face_detection.js <path_to_image>`);
 
 const blur = (imagePath, faceDetails) => {
   const extension = path.extname(imagePath);
